@@ -13,9 +13,9 @@ It first validates user input and then prints out the input to the client in a f
 #### How to use it?
 
 * Run the server with the following command:
-   `go run main.go`
+   cd cmd -> `go run main.go`
 * Connect to the server with telnet
-   `telnet localhost:8080`
+   `telnet localhost 8080`
 * Type in a number and press enter
 * The server will respond with the fizzbuzz style response.
 
