@@ -46,7 +46,7 @@ func handle(conn net.Conn) {
 		sc := scanner.Text()
 
 		// add validate function
-		num, err := validate(sc, conn)
+		num, err := validate(sc)
 		if err != nil {
 			fmt.Fprintln(conn, err.Error())
 			continue
@@ -64,7 +64,7 @@ func handle(conn net.Conn) {
 
 // validate returns a number if input is a number, used regexp for validation
 // if not, returns error
-func validate(s string, conn net.Conn) (int, error) {
+func validate(s string) (int, error) {
 	// validate input number
 	if s == "" {
 		return 0, errors.New("empty string")
